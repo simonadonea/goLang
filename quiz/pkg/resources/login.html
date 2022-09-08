@@ -1,0 +1,21 @@
+{{if .Success}}
+    <h1>Login successful!</h1>
+    <a href="/quiz">
+        <button name="quiz">Start quiz!</button>
+    </a>
+{{else}}
+    <h1>Login</h1>
+    <form method="POST">
+        <label>Username:</label>
+        <input type="text" name="username"> <br />
+        <label>Password:</label>
+        <input type="password" name="password"> <br />
+        <button name="Login">Login</button>
+    </form>
+    <a href="/">
+        <button>Main page</button>
+    </a>
+{{end}}
+{{if .Fail}}
+<h1>Login failed!</h1>
+{{end}}

@@ -1,0 +1,12 @@
+<h1>Quiz</h1>
+
+{{range .QuizQuestion}}
+<div> <h3>Number:{{.ID}}</h3></div>
+<div>{{.Question}}</div>
+<div>
+    {{range .Answer}}
+    <input type="radio">
+    <label>{{.Text}}</label>
+    {{end}}
+</div>
+{{end}}
